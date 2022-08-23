@@ -76,5 +76,20 @@ class RegistrationControllerTest extends WebTestCase
             $response->getContent()
         );
     }
+
+
+    public function testVerifyUserEmailIdisNull() {
+        
+        $client = static::createClient();
+
+        $client->request('GET', '/verify/email', [
+            'id' => 'null'
+        ]);
+ 
+        $response = $client->getResponse();
+
+        $this->assertEquals(true, $response->isRedirect('/register'));
+    }
+
     
 }

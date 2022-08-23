@@ -1,0 +1,14 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+body {
+    background-color: #ececec;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    
+    li {
+        list-style: none;
+    }
+}
